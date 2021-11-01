@@ -24,7 +24,7 @@ Variables
   --clr-grey-3: hsl(209, 34%, 30%);
   --clr-grey-4: hsl(209, 28%, 39%);
   /* grey used for paragraphs */
-  --clr-grey-5: hsl(210, 22%, 49%);
+  --clr-grey-5: #617d98;
   --clr-grey-6: hsl(209, 23%, 60%);
   --clr-grey-7: hsl(211, 27%, 70%);
   --clr-grey-8: hsl(210, 31%, 80%);
@@ -131,8 +131,24 @@ p {
   .section {
     width: 95vw;
   }
+
+  .btn {
+    min-width: 9rem;
+  }
 }
 
+.btn-container {
+  display: grid;
+}
+.btn {
+  width: 80px;
+  margin: 0 auto;
+  background: var(--clr-black);
+  color: #fff;
+  padding: 0 0.75rem;
+  letter-spacing: var(--spacing);
+  border-radius: var(--radius);
+}
 /*
 =============== 
 Stock Photos
@@ -141,8 +157,12 @@ Stock Photos
 .search {
   padding: 5rem 0 0 0;
   width: 90vw;
+  min-height: 2rem;
   max-width: var(--max-width);
   margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  column-gap: 0.5rem;
 }
 .search-form {
   display: flex;
@@ -161,6 +181,7 @@ Stock Photos
   color: var(--clr-grey-5);
   border-bottom: 3px solid var(--clr-grey-5);
 }
+
 .form-input {
   color: var(--clr-grey-3);
 }

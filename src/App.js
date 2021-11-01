@@ -13,6 +13,45 @@ function App() {
   const [query, setQuery] = useState('');
   const targeted = useRef(false);
   const [newImages, setNewImages] = useState(false);
+  const [mode, setMode] = useState(false);
+  const theme = useRef();
+
+  const darkStyles = {
+    borderBottom: '3px solid white',
+    color: 'white',
+  };
+  const lightStyles = {
+    borderBottom: '3px solid #617d98',
+    color: '#617d98',
+  };
+
+  const handleTheme = () => {
+    setMode(() => {
+      setMode(!mode);
+    });
+    const btn = theme.current;
+
+    if (!mode) {
+      btn.style.backgroundColor = 'white';
+      btn.style.color = 'black';
+    } else {
+      btn.style.backgroundColor = 'black';
+      btn.style.color = 'white';
+    }
+  };
+  const darkBody = {
+    backgroundColor: 'black',
+    color: 'white',
+  };
+  useEffect(() => {
+    if (mode) {
+      window.document.body.style.backgroundColor = 'black';
+      window.document.body.style.color = 'white';
+    } else {
+      window.document.body.style.backgroundColor = 'white';
+      window.document.body.style.color = 'black';
+    }
+  }, [mode]);
 
   const fetchPhotos = async () => {
     try {
@@ -97,12 +136,28 @@ function App() {
             setQuery(e.target.value);
           }}
         >
-          <input type='text' placeholder='search' className='form-input' />
-          <button type='submit' className='submit-btn' onClick={handleSubmit}>
+          <input
+            type='text'
+            placeholder='search'
+            className='form-input'
+            style={mode ? darkStyles : lightStyles}
+          />
+          <button
+            type='submit'
+            className='submit-btn'
+            onClick={handleSubmit}
+            style={mode ? darkStyles : lightStyles}
+          >
             <FaSearch />
           </button>
         </form>
+        <div className='btn-container'>
+          <button className=' btn' ref={theme} onClick={handleTheme}>
+            {!mode ? 'Dark Mode' : 'Light Mode'}
+          </button>
+        </div>
       </section>
+
       <section className='photos'>
         <div className='photos-center'>
           {photo.map((item, index) => {
