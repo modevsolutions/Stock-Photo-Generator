@@ -14,7 +14,6 @@ function App() {
   const targeted = useRef(false);
   const [newImages, setNewImages] = useState(false);
   const [mode, setMode] = useState(false);
-  const theme = useRef();
 
   const darkStyles = {
     borderBottom: '3px solid white',
@@ -29,27 +28,16 @@ function App() {
     setMode(() => {
       setMode(!mode);
     });
-    const btn = theme.current;
+  };
 
-    if (!mode) {
-      btn.style.backgroundColor = 'white';
-      btn.style.color = 'black';
-    } else {
-      btn.style.backgroundColor = 'black';
-      btn.style.color = 'white';
-    }
-  };
-  const darkBody = {
-    backgroundColor: 'black',
-    color: 'white',
-  };
   useEffect(() => {
+    const body = window.document.body.style;
     if (mode) {
-      window.document.body.style.backgroundColor = 'black';
-      window.document.body.style.color = 'white';
+      body.background = 'black';
+      body.color = 'white';
     } else {
-      window.document.body.style.backgroundColor = 'white';
-      window.document.body.style.color = 'black';
+      body.background = 'white';
+      body.color = 'black';
     }
   }, [mode]);
 
@@ -152,7 +140,15 @@ function App() {
           </button>
         </form>
         <div className='btn-container'>
-          <button className=' btn' ref={theme} onClick={handleTheme}>
+          <button
+            className=' btn'
+            onClick={handleTheme}
+            style={
+              mode
+                ? { backgroundColor: 'white', color: 'black' }
+                : { backgroundColor: 'black' }
+            }
+          >
             {!mode ? 'Dark Mode' : 'Light Mode'}
           </button>
         </div>
