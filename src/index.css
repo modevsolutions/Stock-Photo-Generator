@@ -147,7 +147,11 @@ p {
   margin: 0 auto;
   background: var(--clr-black);
   color: #fff;
+  font-weight: bold;
+  text-transform: capitalize;
+  cursor: pointer;
   padding: 0 0.75rem;
+  border-color: transparent;
   letter-spacing: var(--spacing);
   border-radius: var(--radius);
   transition: var(--transition-2);
