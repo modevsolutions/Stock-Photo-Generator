@@ -1,12 +1,12 @@
 # TABLE OF CONTENT
-- [Overview](https://github.com/mo-devsolutions/Stock-Photo-Generator/new/main?readme=1#overview)
-  - [About Stock Photo Generator](https://github.com/mo-devsolutions/Stock-Photo-Generator/new/main?readme=1#about-stock-photo-generator)
-  - [Screen shoot](https://github.com/mo-devsolutions/Stock-Photo-Generator/new/main?readme=1#screen-shots)
-  - [link](https://github.com/mo-devsolutions/Stock-Photo-Generator/new/main?readme=1#link)
-- [Coding Process](https://github.com/mo-devsolutions/Stock-Photo-Generator/new/main?readme=1#coding-process)
-  - [Built with](https://github.com/mo-devsolutions/Stock-Photo-Generator/new/main?readme=1#built-with)
-- [Resources](https://github.com/mo-devsolutions/Stock-Photo-Generator/new/main?readme=1#resources)
-- [Author](https://github.com/mo-devsolutions/Stock-Photo-Generator/new/main?readme=1#author)
+- [Overview](https://github.com/mo-devsolutions/Stock-Photo-Generator/#overview)
+  - [About Stock Photo Generator](https://github.com/mo-devsolutions/Stock-Photo-Generator/#about-stock-photo-generator)
+  - [Screen shoot](https://github.com/mo-devsolutions/Stock-Photo-Generator/#screen-shots)
+  - [link](https://github.com/mo-devsolutions/Stock-Photo-Generator/#link)
+- [Coding Process](https://github.com/mo-devsolutions/Stock-Photo-Generator/#coding-process)
+  - [Built with](https://github.com/mo-devsolutions/Stock-Photo-Generator/#built-with)
+- [Resources](https://github.com/mo-devsolutions/Stock-Photo-Generator/#resources)
+- [Author](https://github.com/mo-devsolutions/Stock-Photo-Generator/#author)
 ## OVERVIEW
 ### About Stock Photo Generator
 Stock Photo Generator Allow users to search for high quality pictures from different  
