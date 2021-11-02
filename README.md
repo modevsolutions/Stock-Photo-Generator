@@ -26,4 +26,4 @@ from **DARK MODE** to **LIGHT MODE** and vice versal
 - [Unsplash Api](https://unsplash.com/documentation)
 ## AUTHOR
 - LinkedIn - [SHITTU MOHAMMED](https://www.linkedin.com/in/mohammed-shittu-b8ab4365/)
-- Website -[Modevsolutions](www.modevsolutions.com)
+- Website -[Modevsolutions](https://www.modevsolutions.com)
