@@ -6,6 +6,16 @@ const clientId = `?client_id=${process.env.REACT_APP_ACCESS_KEY}`;
 const mainUrl = `https://api.unsplash.com/photos/`;
 const searchUrl = `https://api.unsplash.com/search/photos/`;
 
+const storageItem = () => {
+  let theme = 'light-theme';
+
+  if (localStorage.getItem('mode')) {
+    theme = localStorage.getItem('mode');
+    return theme;
+  }
+  return theme;
+};
+
 function App() {
   const [loading, setLoading] = useState(false);
   const [photo, setPhoto] = useState([]);
@@ -13,7 +23,7 @@ function App() {
   const [query, setQuery] = useState('');
   const targeted = useRef(false);
   const [newImages, setNewImages] = useState(false);
-  const [mode, setMode] = useState(false);
+  const [mode, setMode] = useState(storageItem);
 
   const darkStyles = {
     borderBottom: '3px solid white',
@@ -26,19 +36,26 @@ function App() {
 
   const handleTheme = () => {
     setMode(() => {
-      setMode(!mode);
+      if (mode === 'light-theme') {
+        setMode('dark-theme');
+      }
+      if (mode === 'dark-theme') {
+        setMode('light-theme');
+      }
     });
   };
 
   useEffect(() => {
     const body = window.document.body.style;
-    if (mode) {
+    if (mode === 'dark-theme') {
       body.background = 'black';
       body.color = 'white';
-    } else {
+    }
+    if (mode === 'light-theme') {
       body.background = 'white';
       body.color = 'black';
     }
+    localStorage.setItem('mode', mode);
   }, [mode]);
 
   const fetchPhotos = async () => {
@@ -128,13 +145,13 @@ function App() {
             type='text'
             placeholder='search'
             className='form-input'
-            style={mode ? darkStyles : lightStyles}
+            style={mode === 'dark-theme' ? darkStyles : lightStyles}
           />
           <button
             type='submit'
             className='submit-btn'
             onClick={handleSubmit}
-            style={mode ? darkStyles : lightStyles}
+            style={mode === 'dark-theme' ? darkStyles : lightStyles}
           >
             <FaSearch />
           </button>
@@ -144,12 +161,12 @@ function App() {
             className=' btn'
             onClick={handleTheme}
             style={
-              mode
+              mode === 'dark-theme'
                 ? { backgroundColor: 'white', color: 'black' }
                 : { backgroundColor: 'black' }
             }
           >
-            {!mode ? 'Dark Mode' : 'Light Mode'}
+            {mode === 'light-theme' ? 'Dark Mode' : 'Light Mode'}
           </button>
         </div>
       </section>
