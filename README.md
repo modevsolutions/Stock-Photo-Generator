@@ -9,10 +9,11 @@
 - [Author](https://github.com/mo-devsolutions/Stock-Photo-Generator/#author)
 ## OVERVIEW
 ### About Stock Photo Generator
-Stock Photo Generator Allow users to search for high quality pictures from different  
-photographers and content creators arround the world. The App have an infinite scroll  
-effect thats keeps rendering different pages from the API. Users can as well switch **THEME**  
+Stock Photo Generator Allow users to search for high-quality pictures from different
+photographers and content creators around the world. The App have an infinite scroll
+effect that keeps rendering different pages from the API. Users can as well switch **THEME**  
 from **DARK MODE** to **LIGHT MODE** and vice versal
+
 ### Screen Shots
 ![Dark Mode screenshot](https://github.com/mo-devsolutions/Stock-Photo-Generator/blob/main/src/images/Dark%20mode.png) ![Light Mode screenshot](https://github.com/mo-devsolutions/Stock-Photo-Generator/blob/main/src/images/light%20mode.png)
 ### Link
