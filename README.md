@@ -17,7 +17,7 @@ from **DARK MODE** to **LIGHT MODE** and vice versal
 ### Screen Shots
 ![Dark Mode screenshot](https://github.com/mo-devsolutions/Stock-Photo-Generator/blob/main/src/images/Dark%20mode.png) ![Light Mode screenshot](https://github.com/mo-devsolutions/Stock-Photo-Generator/blob/main/src/images/light%20mode.png)
 ### Link
-- [live site](https://modevsolutions-stock-photo-generator.netlify.app/)
+- [live site](https://photogenerator.modevsolutions.com/)
 ## Coding Process
 #### Built With
 - HTML
