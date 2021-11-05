@@ -23,7 +23,7 @@ from **DARK MODE** to **LIGHT MODE** and vice versal
 - HTML
 - CSS 
 - REACT
-- OMBDAPI
+- UNSPLASH API
 ## RESOURCES
 - [Unsplash Api](https://unsplash.com/documentation)
 ## AUTHOR
