@@ -161,7 +161,8 @@ p {
 Stock Photos
 ===============
 */
-.search {
+.search,
+header {
   padding: 5rem 0 0 0;
   width: 90vw;
   min-height: 2rem;
@@ -170,6 +171,13 @@ Stock Photos
   display: grid;
   grid-template-columns: 1fr auto;
   column-gap: 0.5rem;
+}
+
+header {
+  padding-top: 2rem;
+  grid-template-columns: 1fr;
+  margin-top: 2rem;
+  border-radius: var(--radius);
 }
 .search-form {
   display: flex;
