@@ -133,9 +133,6 @@ function App() {
   };
   return (
     <main>
-      <header>
-        <h1>stock photo generator</h1>
-      </header>
       <section className='search'>
         <form
           className='search-form'
